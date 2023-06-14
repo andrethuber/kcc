@@ -1673,7 +1673,7 @@ def makeBook(source, qtgui=None):
             if len(tomes) > 1:
                 filepath.append(
                     getOutputFilename(
-                        source, options.output, ".cbz", " " + str(tomeNumber)
+                        source, options.output, ".cbz", "_" + str(tomeNumber)
                     )
                 )
             else:
@@ -1685,7 +1685,7 @@ def makeBook(source, qtgui=None):
             if len(tomes) > 1:
                 filepath.append(
                     getOutputFilename(
-                        source, options.output, ".epub", " " + str(tomeNumber)
+                        source, options.output, ".epub", "_" + str(tomeNumber)
                     )
                 )
             else:
