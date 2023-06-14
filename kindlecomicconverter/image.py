@@ -36,79 +36,135 @@ class ProfileData:
     def __init__(self):
         pass
 
-    Palette4 = [
-        0x00, 0x00, 0x00,
-        0x55, 0x55, 0x55,
-        0xaa, 0xaa, 0xaa,
-        0xff, 0xff, 0xff
-    ]
+    Palette4 = [0x00, 0x00, 0x00, 0x55, 0x55, 0x55, 0xAA, 0xAA, 0xAA, 0xFF, 0xFF, 0xFF]
 
     Palette15 = [
-        0x00, 0x00, 0x00,
-        0x11, 0x11, 0x11,
-        0x22, 0x22, 0x22,
-        0x33, 0x33, 0x33,
-        0x44, 0x44, 0x44,
-        0x55, 0x55, 0x55,
-        0x66, 0x66, 0x66,
-        0x77, 0x77, 0x77,
-        0x88, 0x88, 0x88,
-        0x99, 0x99, 0x99,
-        0xaa, 0xaa, 0xaa,
-        0xbb, 0xbb, 0xbb,
-        0xcc, 0xcc, 0xcc,
-        0xdd, 0xdd, 0xdd,
-        0xff, 0xff, 0xff,
+        0x00,
+        0x00,
+        0x00,
+        0x11,
+        0x11,
+        0x11,
+        0x22,
+        0x22,
+        0x22,
+        0x33,
+        0x33,
+        0x33,
+        0x44,
+        0x44,
+        0x44,
+        0x55,
+        0x55,
+        0x55,
+        0x66,
+        0x66,
+        0x66,
+        0x77,
+        0x77,
+        0x77,
+        0x88,
+        0x88,
+        0x88,
+        0x99,
+        0x99,
+        0x99,
+        0xAA,
+        0xAA,
+        0xAA,
+        0xBB,
+        0xBB,
+        0xBB,
+        0xCC,
+        0xCC,
+        0xCC,
+        0xDD,
+        0xDD,
+        0xDD,
+        0xFF,
+        0xFF,
+        0xFF,
     ]
 
     Palette16 = [
-        0x00, 0x00, 0x00,
-        0x11, 0x11, 0x11,
-        0x22, 0x22, 0x22,
-        0x33, 0x33, 0x33,
-        0x44, 0x44, 0x44,
-        0x55, 0x55, 0x55,
-        0x66, 0x66, 0x66,
-        0x77, 0x77, 0x77,
-        0x88, 0x88, 0x88,
-        0x99, 0x99, 0x99,
-        0xaa, 0xaa, 0xaa,
-        0xbb, 0xbb, 0xbb,
-        0xcc, 0xcc, 0xcc,
-        0xdd, 0xdd, 0xdd,
-        0xee, 0xee, 0xee,
-        0xff, 0xff, 0xff,
+        0x00,
+        0x00,
+        0x00,
+        0x11,
+        0x11,
+        0x11,
+        0x22,
+        0x22,
+        0x22,
+        0x33,
+        0x33,
+        0x33,
+        0x44,
+        0x44,
+        0x44,
+        0x55,
+        0x55,
+        0x55,
+        0x66,
+        0x66,
+        0x66,
+        0x77,
+        0x77,
+        0x77,
+        0x88,
+        0x88,
+        0x88,
+        0x99,
+        0x99,
+        0x99,
+        0xAA,
+        0xAA,
+        0xAA,
+        0xBB,
+        0xBB,
+        0xBB,
+        0xCC,
+        0xCC,
+        0xCC,
+        0xDD,
+        0xDD,
+        0xDD,
+        0xEE,
+        0xEE,
+        0xEE,
+        0xFF,
+        0xFF,
+        0xFF,
     ]
 
-    PalleteNull = [
-    ]
+    PalleteNull = []
 
     Profiles = {
-        'K1': ("Kindle 1", (600, 670), Palette4, 1.8),
-        'K11': ("Kindle 11", (1072, 1448), Palette16, 1.8),
-        'K2': ("Kindle 2", (600, 670), Palette15, 1.8),
-        'K34': ("Kindle Keyboard/Touch", (600, 800), Palette16, 1.8),
-        'K578': ("Kindle", (600, 800), Palette16, 1.8),
-        'KDX': ("Kindle DX/DXG", (824, 1000), Palette16, 1.8),
-        'KPW': ("Kindle Paperwhite 1/2", (758, 1024), Palette16, 1.8),
-        'KV': ("Kindle Paperwhite 3/4/Voyage/Oasis", (1072, 1448), Palette16, 1.8),
-        'KPW5': ("Kindle Paperwhite 5/Signature Edition", (1236, 1648), Palette16, 1.8),
-        'KO': ("Kindle Oasis 2/3", (1264, 1680), Palette16, 1.8),
-        'KS': ("Kindle Scribe", (1860, 2480), Palette16, 1.8),
-        'KoMT': ("Kobo Mini/Touch", (600, 800), Palette16, 1.8),
-        'KoG': ("Kobo Glo", (768, 1024), Palette16, 1.8),
-        'KoGHD': ("Kobo Glo HD", (1072, 1448), Palette16, 1.8),
-        'KoA': ("Kobo Aura", (758, 1024), Palette16, 1.8),
-        'KoAHD': ("Kobo Aura HD", (1080, 1440), Palette16, 1.8),
-        'KoAH2O': ("Kobo Aura H2O", (1080, 1430), Palette16, 1.8),
-        'KoAO': ("Kobo Aura ONE", (1404, 1872), Palette16, 1.8),
-        'KoN': ("Kobo Nia", (758, 1024), Palette16, 1.8),
-        'KoC': ("Kobo Clara HD/Kobo Clara 2E", (1072, 1448), Palette16, 1.8),
-        'KoL': ("Kobo Libra H2O/Kobo Libra 2", (1264, 1680), Palette16, 1.8),
-        'KoF': ("Kobo Forma", (1440, 1920), Palette16, 1.8),
-        'KoS': ("Kobo Sage", (1440, 1920), Palette16, 1.8),
-        'KoE': ("Kobo Elipsa", (1404, 1872), Palette16, 1.8),
-        'OTHER': ("Other", (0, 0), Palette16, 1.8),
+        "K1": ("Kindle 1", (600, 670), Palette4, 1.8),
+        "K11": ("Kindle 11", (1072, 1448), Palette16, 1.8),
+        "K2": ("Kindle 2", (600, 670), Palette15, 1.8),
+        "K34": ("Kindle Keyboard/Touch", (600, 800), Palette16, 1.8),
+        "K578": ("Kindle", (600, 800), Palette16, 1.8),
+        "KDX": ("Kindle DX/DXG", (824, 1000), Palette16, 1.8),
+        "KPW": ("Kindle Paperwhite 1/2", (758, 1024), Palette16, 1.8),
+        "KV": ("Kindle Paperwhite 3/4/Voyage/Oasis", (1072, 1448), Palette16, 1.8),
+        "KPW5": ("Kindle Paperwhite 5/Signature Edition", (1236, 1648), Palette16, 1.8),
+        "KO": ("Kindle Oasis 2/3", (1264, 1680), Palette16, 1.8),
+        "KS": ("Kindle Scribe", (1860, 2480), Palette16, 1.8),
+        "KoMT": ("Kobo Mini/Touch", (600, 800), Palette16, 1.8),
+        "KoG": ("Kobo Glo", (768, 1024), Palette16, 1.8),
+        "KoGHD": ("Kobo Glo HD", (1072, 1448), Palette16, 1.8),
+        "KoA": ("Kobo Aura", (758, 1024), Palette16, 1.8),
+        "KoAHD": ("Kobo Aura HD", (1080, 1440), Palette16, 1.8),
+        "KoAH2O": ("Kobo Aura H2O", (1080, 1430), Palette16, 1.8),
+        "KoAO": ("Kobo Aura ONE", (1404, 1872), Palette16, 1.8),
+        "KoN": ("Kobo Nia", (758, 1024), Palette16, 1.8),
+        "KoC": ("Kobo Clara HD/Kobo Clara 2E", (1072, 1448), Palette16, 1.8),
+        "KoL": ("Kobo Libra H2O/Kobo Libra 2", (1264, 1680), Palette16, 1.8),
+        "KoF": ("Kobo Forma", (1440, 1920), Palette16, 1.8),
+        "KoS": ("Kobo Sage", (1440, 1920), Palette16, 1.8),
+        "KoE": ("Kobo Elipsa", (1404, 1872), Palette16, 1.8),
+        "OTHER": ("Other", (0, 0), Palette16, 1.8),
     }
 
 
@@ -119,11 +175,11 @@ class ComicPageParser:
         self.source = source
         self.size = self.opt.profileData[1]
         self.payload = []
-        self.image = Image.open(os.path.join(source[0], source[1])).convert('RGB')
+        self.image = Image.open(os.path.join(source[0], source[1])).convert("RGB")
         self.color = self.colorCheck()
         self.fill = self.fillCheck()
         # backwards compatibility for Pillow >9.1.0
-        if not hasattr(Image, 'Resampling'):
+        if not hasattr(Image, "Resampling"):
             Image.Resampling = Image
         self.splitCheck()
 
@@ -148,13 +204,26 @@ class ComicPageParser:
             else:
                 pageone = self.image.crop(leftbox)
                 pagetwo = self.image.crop(rightbox)
-            new_image = Image.new("RGB", (int(width / 2), int(height*2)))
+            new_image = Image.new("RGB", (int(width / 2), int(height * 2)))
             new_image.paste(pageone, (0, 0))
             new_image.paste(pagetwo, (0, height))
-            self.payload.append(['N', self.source, new_image, self.color, self.fill])
-        elif (width > height) != (dstwidth > dstheight) and width <= dstheight and height <= dstwidth \
-                and not self.opt.webtoon and self.opt.splitter == 1:
-            self.payload.append(['R', self.source, self.image.rotate(90, Image.Resampling.BICUBIC, True), self.color, self.fill])
+            self.payload.append(["N", self.source, new_image, self.color, self.fill])
+        elif (
+            (width > height) != (dstwidth > dstheight)
+            and width <= dstheight
+            and height <= dstwidth
+            and not self.opt.webtoon
+            and self.opt.splitter == 1
+        ):
+            self.payload.append(
+                [
+                    "R",
+                    self.source,
+                    self.image.rotate(90, Image.Resampling.BICUBIC, True),
+                    self.color,
+                    self.fill,
+                ]
+            )
         elif (width > height) != (dstwidth > dstheight) and not self.opt.webtoon:
             if self.opt.splitter != 1:
                 if width > height:
@@ -169,13 +238,20 @@ class ComicPageParser:
                 else:
                     pageone = self.image.crop(leftbox)
                     pagetwo = self.image.crop(rightbox)
-                self.payload.append(['S1', self.source, pageone, self.color, self.fill])
-                self.payload.append(['S2', self.source, pagetwo, self.color, self.fill])
+                self.payload.append(["S1", self.source, pageone, self.color, self.fill])
+                self.payload.append(["S2", self.source, pagetwo, self.color, self.fill])
             if self.opt.splitter > 0:
-                self.payload.append(['R', self.source, self.image.rotate(90, Image.Resampling.BICUBIC, True),
-                                    self.color, self.fill])
+                self.payload.append(
+                    [
+                        "R",
+                        self.source,
+                        self.image.rotate(90, Image.Resampling.BICUBIC, True),
+                        self.color,
+                        self.fill,
+                    ]
+                )
         else:
-            self.payload.append(['N', self.source, self.image, self.color, self.fill])
+            self.payload.append(["N", self.source, self.image, self.color, self.fill])
 
     def colorCheck(self):
         if self.opt.webtoon:
@@ -183,14 +259,17 @@ class ComicPageParser:
         else:
             img = self.image.copy()
             bands = img.getbands()
-            if bands == ('R', 'G', 'B') or bands == ('R', 'G', 'B', 'A'):
+            if bands == ("R", "G", "B") or bands == ("R", "G", "B", "A"):
                 thumb = img.resize((40, 40))
                 SSE, bias = 0, [0, 0, 0]
                 bias = ImageStat.Stat(thumb).mean[:3]
                 bias = [b - sum(bias) / 3 for b in bias]
                 for pixel in thumb.getdata():
                     mu = sum(pixel) / 3
-                    SSE += sum((pixel[i] - mu - bias[i]) * (pixel[i] - mu - bias[i]) for i in [0, 1, 2])
+                    SSE += sum(
+                        (pixel[i] - mu - bias[i]) * (pixel[i] - mu - bias[i])
+                        for i in [0, 1, 2]
+                    )
                 MSE = float(SSE) / (40 * 40)
                 if MSE > 22:
                     return True
@@ -203,7 +282,7 @@ class ComicPageParser:
         if self.opt.bordersColor:
             return self.opt.bordersColor
         else:
-            bw = self.image.convert('L').point(lambda x: 0 if x < 128 else 255, '1')
+            bw = self.image.convert("L").point(lambda x: 0 if x < 128 else 255, "1")
             imageBoxA = bw.getbbox()
             imageBoxB = ImageChops.invert(bw).getbbox()
             if imageBoxA is None or imageBoxB is None:
@@ -212,30 +291,37 @@ class ComicPageParser:
             else:
                 surfaceB = (imageBoxA[2] - imageBoxA[0]) * (imageBoxA[3] - imageBoxA[1])
                 surfaceW = (imageBoxB[2] - imageBoxB[0]) * (imageBoxB[3] - imageBoxB[1])
-                diff = ((max(surfaceB, surfaceW) - min(surfaceB, surfaceW)) / min(surfaceB, surfaceW)) * 100
+                diff = (
+                    (max(surfaceB, surfaceW) - min(surfaceB, surfaceW))
+                    / min(surfaceB, surfaceW)
+                ) * 100
             if diff > 0.5:
                 if surfaceW < surfaceB:
-                    return 'white'
+                    return "white"
                 elif surfaceW > surfaceB:
-                    return 'black'
+                    return "black"
             else:
                 fill = 0
                 startY = 0
                 while startY < bw.size[1]:
                     if startY + 5 > bw.size[1]:
                         startY = bw.size[1] - 5
-                    fill += self.getImageHistogram(bw.crop((0, startY, bw.size[0], startY + 5)))
+                    fill += self.getImageHistogram(
+                        bw.crop((0, startY, bw.size[0], startY + 5))
+                    )
                     startY += 5
                 startX = 0
                 while startX < bw.size[0]:
                     if startX + 5 > bw.size[0]:
                         startX = bw.size[0] - 5
-                    fill += self.getImageHistogram(bw.crop((startX, 0, startX + 5, bw.size[1])))
+                    fill += self.getImageHistogram(
+                        bw.crop((startX, 0, startX + 5, bw.size[1]))
+                    )
                     startX += 5
                 if fill > 0:
-                    return 'black'
+                    return "black"
                 else:
-                    return 'white'
+                    return "white"
 
 
 class ComicPage:
@@ -249,46 +335,56 @@ class ComicPage:
         self.fill = fill
         self.rotated = False
         self.orgPath = os.path.join(path[0], path[1])
-        if 'N' in mode:
-            self.targetPath = os.path.join(path[0], os.path.splitext(path[1])[0]) + '-KCC'
-        elif 'R' in mode:
-            self.targetPath = os.path.join(path[0], os.path.splitext(path[1])[0]) + '-KCC-A'
+        if "N" in mode:
+            self.targetPath = (
+                os.path.join(path[0], os.path.splitext(path[1])[0]) + "-KCC"
+            )
+        elif "R" in mode:
+            self.targetPath = (
+                os.path.join(path[0], os.path.splitext(path[1])[0]) + "-KCC-A"
+            )
             self.rotated = True
-        elif 'S1' in mode:
-            self.targetPath = os.path.join(path[0], os.path.splitext(path[1])[0]) + '-KCC-B'
-        elif 'S2' in mode:
-            self.targetPath = os.path.join(path[0], os.path.splitext(path[1])[0]) + '-KCC-C'
+        elif "S1" in mode:
+            self.targetPath = (
+                os.path.join(path[0], os.path.splitext(path[1])[0]) + "-KCC-B"
+            )
+        elif "S2" in mode:
+            self.targetPath = (
+                os.path.join(path[0], os.path.splitext(path[1])[0]) + "-KCC-C"
+            )
         # backwards compatibility for Pillow >9.1.0
-        if not hasattr(Image, 'Resampling'):
+        if not hasattr(Image, "Resampling"):
             Image.Resampling = Image
 
     def saveToDir(self):
         try:
             flags = []
             if not self.opt.forcecolor and not self.opt.forcepng:
-                self.image = self.image.convert('L')
+                self.image = self.image.convert("L")
             if self.rotated:
-                flags.append('Rotated')
-            if self.fill != 'white':
-                flags.append('BlackBackground')
+                flags.append("Rotated")
+            if self.fill != "white":
+                flags.append("BlackBackground")
             if self.opt.forcepng:
                 self.image.info["transparency"] = None
-                self.targetPath += '.png'
-                self.image.save(self.targetPath, 'PNG', optimize=1)
+                self.targetPath += ".png"
+                self.image.save(self.targetPath, "PNG", optimize=1)
             else:
-                self.targetPath += '.jpg'
+                self.targetPath += ".jpg"
                 if self.opt.mozjpeg:
                     with io.BytesIO() as output:
                         self.image.save(output, format="JPEG", optimize=1, quality=85)
                         input_jpeg_bytes = output.getvalue()
-                        output_jpeg_bytes = mozjpeg_lossless_optimization.optimize(input_jpeg_bytes)
+                        output_jpeg_bytes = mozjpeg_lossless_optimization.optimize(
+                            input_jpeg_bytes
+                        )
                         with open(self.targetPath, "wb") as output_jpeg_file:
                             output_jpeg_file.write(output_jpeg_bytes)
                 else:
-                    self.image.save(self.targetPath, 'JPEG', optimize=1, quality=85)
+                    self.image.save(self.targetPath, "JPEG", optimize=1, quality=85)
             return [md5Checksum(self.targetPath), flags, self.orgPath]
         except IOError as err:
-            raise RuntimeError('Cannot save image. ' + str(err))
+            raise RuntimeError("Cannot save image. " + str(err))
 
     def autocontrastImage(self):
         gamma = self.opt.gamma
@@ -299,16 +395,18 @@ class ComicPage:
         if gamma == 1.0:
             self.image = ImageOps.autocontrast(self.image)
         else:
-            self.image = ImageOps.autocontrast(Image.eval(self.image, lambda a: int(255 * (a / 255.) ** gamma)))
+            self.image = ImageOps.autocontrast(
+                Image.eval(self.image, lambda a: int(255 * (a / 255.0) ** gamma))
+            )
 
     def quantizeImage(self):
         colors = len(self.palette) // 3
         if colors < 256:
             self.palette += self.palette[:3] * (256 - colors)
-        palImg = Image.new('P', (1, 1))
+        palImg = Image.new("P", (1, 1))
         palImg.putpalette(self.palette)
-        self.image = self.image.convert('L')
-        self.image = self.image.convert('RGB')
+        self.image = self.image.convert("L")
+        self.image = self.image.convert("RGB")
         # Quantize is deprecated but new function call it internally anyway...
         self.image = self.image.quantize(palette=palImg)
 
@@ -319,17 +417,24 @@ class ComicPage:
         if self.opt.stretch:
             self.image = self.image.resize(self.size, method)
         elif method == Image.Resampling.BICUBIC and not self.opt.upscale:
-            if self.opt.format == 'CBZ' or self.opt.kfx:
+            if self.opt.format == "CBZ" or self.opt.kfx:
                 borderw = int((self.size[0] - self.image.size[0]) / 2)
                 borderh = int((self.size[1] - self.image.size[1]) / 2)
-                self.image = ImageOps.expand(self.image, border=(borderw, borderh), fill=self.fill)
-                if self.image.size[0] != self.size[0] or self.image.size[1] != self.size[1]:
+                self.image = ImageOps.expand(
+                    self.image, border=(borderw, borderh), fill=self.fill
+                )
+                if (
+                    self.image.size[0] != self.size[0]
+                    or self.image.size[1] != self.size[1]
+                ):
                     self.image = ImageOps.fit(self.image, self.size, method=method)
-        else: # if image bigger than device resolution or smaller with upscaling
+        else:  # if image bigger than device resolution or smaller with upscaling
             if abs(ratio_image - ratio_device) < AUTO_CROP_THRESHOLD:
                 self.image = ImageOps.fit(self.image, self.size, method=method)
-            elif self.opt.format == 'CBZ' or self.opt.kfx:
-                self.image = ImageOps.pad(self.image, self.size, method=method, color=self.fill)
+            elif self.opt.format == "CBZ" or self.opt.kfx:
+                self.image = ImageOps.pad(
+                    self.image, self.size, method=method, color=self.fill
+                )
             else:
                 self.image = ImageOps.contain(self.image, self.size, method=method)
 
@@ -347,10 +452,14 @@ class ComicPage:
         bbox = (
             max(0, min(max_margin[0], bbox[0] - min_margin[0])),
             max(0, min(max_margin[1], bbox[1] - min_margin[1])),
-            min(tmptmg.size[0],
-                max(tmptmg.size[0] - max_margin[0], bbox[2] + min_margin[0])),
-            min(tmptmg.size[1],
-                max(tmptmg.size[1] - max_margin[1], bbox[3] + min_margin[1])),
+            min(
+                tmptmg.size[0],
+                max(tmptmg.size[0] - max_margin[0], bbox[2] + min_margin[0]),
+            ),
+            min(
+                tmptmg.size[1],
+                max(tmptmg.size[1] - max_margin[1], bbox[3] + min_margin[1]),
+            ),
         )
         return bbox
 
@@ -361,10 +470,10 @@ class ComicPage:
             self.image = self.image.crop(box)
 
     def cropPageNumber(self, power, minimum):
-        if self.fill != 'white':
-            tmptmg = self.image.convert(mode='L')
+        if self.fill != "white":
+            tmptmg = self.image.convert(mode="L")
         else:
-            tmptmg = ImageOps.invert(self.image.convert(mode='L'))
+            tmptmg = ImageOps.invert(self.image.convert(mode="L"))
         tmptmg = tmptmg.point(lambda x: x and 255)
         tmptmg = tmptmg.filter(ImageFilter.MinFilter(size=3))
         tmptmg = tmptmg.filter(ImageFilter.GaussianBlur(radius=5))
@@ -373,10 +482,10 @@ class ComicPage:
             self.maybeCrop(tmptmg.getbbox(), minimum)
 
     def cropMargin(self, power, minimum):
-        if self.fill != 'white':
-            tmptmg = self.image.convert(mode='L')
+        if self.fill != "white":
+            tmptmg = self.image.convert(mode="L")
         else:
-            tmptmg = ImageOps.invert(self.image.convert(mode='L'))
+            tmptmg = ImageOps.invert(self.image.convert(mode="L"))
         tmptmg = tmptmg.filter(ImageFilter.GaussianBlur(radius=3))
         tmptmg = tmptmg.point(lambda x: (x >= 16 * power) and x)
         if tmptmg.getbbox():
@@ -394,15 +503,15 @@ class Cover:
             self.tomeid = tomeid
         self.image = Image.open(source)
         # backwards compatibility for Pillow >9.1.0
-        if not hasattr(Image, 'Resampling'):
+        if not hasattr(Image, "Resampling"):
             Image.Resampling = Image
         self.process()
 
     def process(self):
-        self.image = self.image.convert('RGB')
+        self.image = self.image.convert("RGB")
         self.image = ImageOps.autocontrast(self.image)
         if not self.options.forcecolor:
-            self.image = self.image.convert('L')
+            self.image = self.image.convert("L")
         self.image.thumbnail(self.options.profileData[1], Image.Resampling.LANCZOS)
         self.save()
 
@@ -410,12 +519,21 @@ class Cover:
         try:
             self.image.save(self.target, "JPEG", optimize=1, quality=85)
         except IOError:
-            raise RuntimeError('Failed to save cover.')
+            raise RuntimeError("Failed to save cover.")
 
     def saveToKindle(self, kindle, asin):
         self.image = self.image.resize((300, 470), Image.Resampling.LANCZOS)
         try:
-            self.image.save(os.path.join(kindle.path.split('documents')[0], 'system', 'thumbnails',
-                                         'thumbnail_' + asin + '_EBOK_portrait.jpg'), 'JPEG', optimize=1, quality=85)
+            self.image.save(
+                os.path.join(
+                    kindle.path.split("documents")[0],
+                    "system",
+                    "thumbnails",
+                    "thumbnail_" + asin + "_EBOK_portrait.jpg",
+                ),
+                "JPEG",
+                optimize=1,
+                quality=85,
+            )
         except IOError:
-            raise RuntimeError('Failed to upload cover.')
+            raise RuntimeError("Failed to upload cover.")

@@ -17,7 +17,11 @@ class Ui_editorDialog(object):
         editorDialog.resize(400, 260)
         editorDialog.setMinimumSize(QtCore.QSize(400, 260))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/Icon/icons/comic2ebook.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(
+            QtGui.QPixmap(":/Icon/icons/comic2ebook.png"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         editorDialog.setWindowIcon(icon)
         self.verticalLayout = QtWidgets.QVBoxLayout(editorDialog)
         self.verticalLayout.setContentsMargins(-1, -1, -1, 5)
@@ -76,7 +80,10 @@ class Ui_editorDialog(object):
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.statusLabel = QtWidgets.QLabel(self.optionWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.MinimumExpanding,
+            QtWidgets.QSizePolicy.MinimumExpanding,
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.statusLabel.sizePolicy().hasHeightForWidth())
@@ -87,14 +94,22 @@ class Ui_editorDialog(object):
         self.okButton = QtWidgets.QPushButton(self.optionWidget)
         self.okButton.setMinimumSize(QtCore.QSize(0, 30))
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/Other/icons/convert.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(
+            QtGui.QPixmap(":/Other/icons/convert.png"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.okButton.setIcon(icon1)
         self.okButton.setObjectName("okButton")
         self.horizontalLayout.addWidget(self.okButton)
         self.cancelButton = QtWidgets.QPushButton(self.optionWidget)
         self.cancelButton.setMinimumSize(QtCore.QSize(0, 30))
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/Other/icons/clear.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(
+            QtGui.QPixmap(":/Other/icons/clear.png"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.cancelButton.setIcon(icon2)
         self.cancelButton.setObjectName("cancelButton")
         self.horizontalLayout.addWidget(self.cancelButton)
@@ -115,4 +130,6 @@ class Ui_editorDialog(object):
         self.label_7.setText(_translate("editorDialog", "Colorist:"))
         self.okButton.setText(_translate("editorDialog", "Save"))
         self.cancelButton.setText(_translate("editorDialog", "Cancel"))
+
+
 from . import KCC_rc

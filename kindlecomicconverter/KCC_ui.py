@@ -16,7 +16,11 @@ class Ui_mainWindow(object):
         mainWindow.setObjectName("mainWindow")
         mainWindow.resize(450, 400)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/Icon/icons/comic2ebook.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(
+            QtGui.QPixmap(":/Icon/icons/comic2ebook.png"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         mainWindow.setWindowIcon(icon)
         self.centralWidget = QtWidgets.QWidget(mainWindow)
         self.centralWidget.setObjectName("centralWidget")
@@ -110,7 +114,9 @@ class Ui_mainWindow(object):
         self.horizontalLayout_3.addWidget(self.croppingPowerSlider)
         self.gridLayout.addWidget(self.croppingWidget, 8, 0, 1, 2)
         self.buttonWidget = QtWidgets.QWidget(self.centralWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.buttonWidget.sizePolicy().hasHeightForWidth())
@@ -122,14 +128,22 @@ class Ui_mainWindow(object):
         self.directoryButton = QtWidgets.QPushButton(self.buttonWidget)
         self.directoryButton.setMinimumSize(QtCore.QSize(0, 30))
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/Other/icons/folder_new.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(
+            QtGui.QPixmap(":/Other/icons/folder_new.png"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.directoryButton.setIcon(icon1)
         self.directoryButton.setObjectName("directoryButton")
         self.gridLayout_4.addWidget(self.directoryButton, 0, 0, 1, 1)
         self.fileButton = QtWidgets.QPushButton(self.buttonWidget)
         self.fileButton.setMinimumSize(QtCore.QSize(0, 30))
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/Other/icons/document_new.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(
+            QtGui.QPixmap(":/Other/icons/document_new.png"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.fileButton.setIcon(icon2)
         self.fileButton.setObjectName("fileButton")
         self.gridLayout_4.addWidget(self.fileButton, 0, 3, 1, 1)
@@ -147,14 +161,22 @@ class Ui_mainWindow(object):
         font.setBold(True)
         self.convertButton.setFont(font)
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/Other/icons/convert.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(
+            QtGui.QPixmap(":/Other/icons/convert.png"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.convertButton.setIcon(icon3)
         self.convertButton.setObjectName("convertButton")
         self.gridLayout_4.addWidget(self.convertButton, 1, 2, 1, 1)
         self.clearButton = QtWidgets.QPushButton(self.buttonWidget)
         self.clearButton.setMinimumSize(QtCore.QSize(0, 30))
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/Other/icons/clear.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(
+            QtGui.QPixmap(":/Other/icons/clear.png"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.clearButton.setIcon(icon4)
         self.clearButton.setObjectName("clearButton")
         self.gridLayout_4.addWidget(self.clearButton, 0, 2, 1, 1)
@@ -173,20 +195,28 @@ class Ui_mainWindow(object):
         self.editorButton = QtWidgets.QPushButton(self.toolWidget)
         self.editorButton.setMinimumSize(QtCore.QSize(0, 30))
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/Other/icons/editor.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(
+            QtGui.QPixmap(":/Other/icons/editor.png"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.editorButton.setIcon(icon5)
         self.editorButton.setObjectName("editorButton")
         self.horizontalLayout.addWidget(self.editorButton)
         self.wikiButton = QtWidgets.QPushButton(self.toolWidget)
         self.wikiButton.setMinimumSize(QtCore.QSize(0, 30))
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/Other/icons/wiki.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(
+            QtGui.QPixmap(":/Other/icons/wiki.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off
+        )
         self.wikiButton.setIcon(icon6)
         self.wikiButton.setObjectName("wikiButton")
         self.horizontalLayout.addWidget(self.wikiButton)
         self.gridLayout.addWidget(self.toolWidget, 0, 0, 1, 2)
         self.jobList = QtWidgets.QListWidget(self.centralWidget)
-        self.jobList.setStyleSheet("QListWidget#jobList {background:#ffffff;background-image:url(:/Other/icons/list_background.png);background-position:center center;background-repeat:no-repeat;color:rgb(0,0,0);}")
+        self.jobList.setStyleSheet(
+            "QListWidget#jobList {background:#ffffff;background-image:url(:/Other/icons/list_background.png);background-position:center center;background-repeat:no-repeat;color:rgb(0,0,0);}"
+        )
         self.jobList.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
         self.jobList.setVerticalScrollMode(QtWidgets.QAbstractItemView.ScrollPerPixel)
         self.jobList.setHorizontalScrollMode(QtWidgets.QAbstractItemView.ScrollPerPixel)
@@ -198,7 +228,7 @@ class Ui_mainWindow(object):
         font.setBold(True)
         self.progressBar.setFont(font)
         self.progressBar.setVisible(False)
-        self.progressBar.setAlignment(QtCore.Qt.AlignJustify|QtCore.Qt.AlignVCenter)
+        self.progressBar.setAlignment(QtCore.Qt.AlignJustify | QtCore.Qt.AlignVCenter)
         self.progressBar.setObjectName("progressBar")
         self.gridLayout.addWidget(self.progressBar, 1, 0, 1, 2)
         self.customWidget = QtWidgets.QWidget(self.centralWidget)
@@ -208,7 +238,9 @@ class Ui_mainWindow(object):
         self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.hLabel = QtWidgets.QLabel(self.customWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.hLabel.sizePolicy().hasHeightForWidth())
@@ -220,7 +252,9 @@ class Ui_mainWindow(object):
         self.widthBox.setObjectName("widthBox")
         self.gridLayout_3.addWidget(self.widthBox, 0, 1, 1, 1)
         self.wLabel = QtWidgets.QLabel(self.customWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.wLabel.sizePolicy().hasHeightForWidth())
@@ -270,52 +304,175 @@ class Ui_mainWindow(object):
     def retranslateUi(self, mainWindow):
         _translate = QtCore.QCoreApplication.translate
         mainWindow.setWindowTitle(_translate("mainWindow", "Kindle Comic Converter"))
-        self.upscaleBox.setToolTip(_translate("mainWindow", "<html><head/><body><p><span style=\" font-weight:600; text-decoration: underline;\">Unchecked - Nothing<br/></span>Images smaller than device resolution will not be resized.</p><p><span style=\" font-weight:600; text-decoration: underline;\">Indeterminate - Stretching<br/></span>Images smaller than device resolution will be resized. Aspect ratio will be not preserved.</p><p><span style=\" font-weight:600; text-decoration: underline;\">Checked - Upscaling<br/></span>Images smaller than device resolution will be resized. Aspect ratio will be preserved.</p></body></html>"))
+        self.upscaleBox.setToolTip(
+            _translate(
+                "mainWindow",
+                '<html><head/><body><p><span style=" font-weight:600; text-decoration: underline;">Unchecked - Nothing<br/></span>Images smaller than device resolution will not be resized.</p><p><span style=" font-weight:600; text-decoration: underline;">Indeterminate - Stretching<br/></span>Images smaller than device resolution will be resized. Aspect ratio will be not preserved.</p><p><span style=" font-weight:600; text-decoration: underline;">Checked - Upscaling<br/></span>Images smaller than device resolution will be resized. Aspect ratio will be preserved.</p></body></html>',
+            )
+        )
         self.upscaleBox.setText(_translate("mainWindow", "Stretch/Upscale"))
-        self.rotateBox.setToolTip(_translate("mainWindow", "<html><head/><body><p><span style=\" font-weight:600; text-decoration: underline;\">Unchecked - Split<br/></span>Double page spreads will be cut into two separate pages.</p><p><span style=\" font-weight:600; text-decoration: underline;\">Indeterminate - Rotate and split<br/></span>Double page spreads will be displayed twice. First rotated and then split. </p><p><span style=\" font-weight:600; text-decoration: underline;\">Checked - Rotate<br/></span>Double page spreads will be rotated.</p></body></html>"))
+        self.rotateBox.setToolTip(
+            _translate(
+                "mainWindow",
+                '<html><head/><body><p><span style=" font-weight:600; text-decoration: underline;">Unchecked - Split<br/></span>Double page spreads will be cut into two separate pages.</p><p><span style=" font-weight:600; text-decoration: underline;">Indeterminate - Rotate and split<br/></span>Double page spreads will be displayed twice. First rotated and then split. </p><p><span style=" font-weight:600; text-decoration: underline;">Checked - Rotate<br/></span>Double page spreads will be rotated.</p></body></html>',
+            )
+        )
         self.rotateBox.setText(_translate("mainWindow", "Spread splitter"))
-        self.outputSplit.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'><span style=\" font-weight:600; text-decoration: underline;\">Unchecked - Automatic mode<br/></span>The output will be split automatically.</p><p style=\'white-space:pre\'><span style=\" font-weight:600; text-decoration: underline;\">Checked - Volume mode<br/></span>Every subdirectory will be considered as a separate volume.</p></body></html>"))
+        self.outputSplit.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'><span style=\" font-weight:600; text-decoration: underline;\">Unchecked - Automatic mode<br/></span>The output will be split automatically.</p><p style='white-space:pre'><span style=\" font-weight:600; text-decoration: underline;\">Checked - Volume mode<br/></span>Every subdirectory will be considered as a separate volume.</p></body></html>",
+            )
+        )
         self.outputSplit.setText(_translate("mainWindow", "Output split"))
-        self.webtoonBox.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Enable special parsing mode for Korean Webtoons.</p></body></html>"))
+        self.webtoonBox.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Enable special parsing mode for Korean Webtoons.</p></body></html>",
+            )
+        )
         self.webtoonBox.setText(_translate("mainWindow", "Webtoon mode"))
-        self.colorBox.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Disable conversion to grayscale.</p></body></html>"))
+        self.colorBox.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Disable conversion to grayscale.</p></body></html>",
+            )
+        )
         self.colorBox.setText(_translate("mainWindow", "Color mode"))
-        self.gammaBox.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Disable automatic gamma correction.</p></body></html>"))
+        self.gammaBox.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Disable automatic gamma correction.</p></body></html>",
+            )
+        )
         self.gammaBox.setText(_translate("mainWindow", "Custom gamma"))
-        self.borderBox.setToolTip(_translate("mainWindow", "<html><head/><body><p><span style=\" font-weight:600; text-decoration: underline;\">Unchecked - Autodetection<br/></span>The color of margins fill will be detected automatically.</p><p><span style=\" font-weight:600; text-decoration: underline;\">Indeterminate - White<br/></span>Margins will be filled with white color.</p><p><span style=\" font-weight:600; text-decoration: underline;\">Checked - Black<br/></span>Margins will be filled with black color.</p></body></html>"))
+        self.borderBox.setToolTip(
+            _translate(
+                "mainWindow",
+                '<html><head/><body><p><span style=" font-weight:600; text-decoration: underline;">Unchecked - Autodetection<br/></span>The color of margins fill will be detected automatically.</p><p><span style=" font-weight:600; text-decoration: underline;">Indeterminate - White<br/></span>Margins will be filled with white color.</p><p><span style=" font-weight:600; text-decoration: underline;">Checked - Black<br/></span>Margins will be filled with black color.</p></body></html>',
+            )
+        )
         self.borderBox.setText(_translate("mainWindow", "W/B margins"))
-        self.mangaBox.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Enable right-to-left reading.</p></body></html>"))
+        self.mangaBox.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Enable right-to-left reading.</p></body></html>",
+            )
+        )
         self.mangaBox.setText(_translate("mainWindow", "Manga mode"))
-        self.qualityBox.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'><span style=\" font-weight:600; text-decoration: underline;\">Unchecked - 4 panels<br/></span>Zoom each corner separately.</p><p style=\'white-space:pre\'><span style=\" font-weight:600; text-decoration: underline;\">Indeterminate - 2 panels<br/></span>Zoom only the top and bottom of the page.</p><p><span style=\" font-weight:600; text-decoration: underline;\">Checked - 4 high-quality panels<br/></span>Zoom each corner separately. Try to increase the quality of magnification. Check wiki for more details.</p></body></html>"))
+        self.qualityBox.setToolTip(
+            _translate(
+                "mainWindow",
+                '<html><head/><body><p style=\'white-space:pre\'><span style=" font-weight:600; text-decoration: underline;">Unchecked - 4 panels<br/></span>Zoom each corner separately.</p><p style=\'white-space:pre\'><span style=" font-weight:600; text-decoration: underline;">Indeterminate - 2 panels<br/></span>Zoom only the top and bottom of the page.</p><p><span style=" font-weight:600; text-decoration: underline;">Checked - 4 high-quality panels<br/></span>Zoom each corner separately. Try to increase the quality of magnification. Check wiki for more details.</p></body></html>',
+            )
+        )
         self.qualityBox.setText(_translate("mainWindow", "Panel View 4/2/HQ"))
-        self.mozJpegBox.setToolTip(_translate("mainWindow", "<html><head/><body><p><span style=\" font-weight:600; text-decoration: underline;\">Unchecked - JPEG<br/></span>Use JPEG files</p><p><span style=\" font-weight:600; text-decoration: underline;\">Indeterminate - force PNG<br/></span>Create PNG files instead JPEG</p><p><span style=\" font-weight:600; text-decoration: underline;\">Checked - mozJpeg<br/></span>10-20% smaller JPEG file, with the same image quality, but processing time multiplied by 2</p></body></html>"))
+        self.mozJpegBox.setToolTip(
+            _translate(
+                "mainWindow",
+                '<html><head/><body><p><span style=" font-weight:600; text-decoration: underline;">Unchecked - JPEG<br/></span>Use JPEG files</p><p><span style=" font-weight:600; text-decoration: underline;">Indeterminate - force PNG<br/></span>Create PNG files instead JPEG</p><p><span style=" font-weight:600; text-decoration: underline;">Checked - mozJpeg<br/></span>10-20% smaller JPEG file, with the same image quality, but processing time multiplied by 2</p></body></html>',
+            )
+        )
         self.mozJpegBox.setText(_translate("mainWindow", "JPEG/PNG/mozJpeg"))
-        self.maximizeStrips.setToolTip(_translate("mainWindow", "<html><head/><body><p><span style=\" font-weight:600; text-decoration: underline;\">Unchecked - 1x4<br/></span>Keep format 1x4 panels strips.</p><p><span style=\" font-weight:600; text-decoration: underline;\">Checked - 2x2<br/></span>Turn 1x4 strips to 2x2 to maximize screen usage.</p></body></html>"))
+        self.maximizeStrips.setToolTip(
+            _translate(
+                "mainWindow",
+                '<html><head/><body><p><span style=" font-weight:600; text-decoration: underline;">Unchecked - 1x4<br/></span>Keep format 1x4 panels strips.</p><p><span style=" font-weight:600; text-decoration: underline;">Checked - 2x2<br/></span>Turn 1x4 strips to 2x2 to maximize screen usage.</p></body></html>',
+            )
+        )
         self.maximizeStrips.setText(_translate("mainWindow", "1x4 to 2x2 strips"))
-        self.croppingBox.setToolTip(_translate("mainWindow", "<html><head/><body><p><span style=\" font-weight:600; text-decoration: underline;\">Unchecked - Disabled</span></p><p>Disabled</p><p><span style=\" font-weight:600; text-decoration: underline;\">Indeterminate - Margins<br/></span>Margins</p><p><span style=\" font-weight:600; text-decoration: underline;\">Checked - Margins + page numbers<br/></span>Margins +page numbers</p></body></html>"))
+        self.croppingBox.setToolTip(
+            _translate(
+                "mainWindow",
+                '<html><head/><body><p><span style=" font-weight:600; text-decoration: underline;">Unchecked - Disabled</span></p><p>Disabled</p><p><span style=" font-weight:600; text-decoration: underline;">Indeterminate - Margins<br/></span>Margins</p><p><span style=" font-weight:600; text-decoration: underline;">Checked - Margins + page numbers<br/></span>Margins +page numbers</p></body></html>',
+            )
+        )
         self.croppingBox.setText(_translate("mainWindow", "Cropping mode"))
-        self.deleteBox.setToolTip(_translate("mainWindow", "Delete input file(s) or directory. It\'s not recoverable!"))
+        self.deleteBox.setToolTip(
+            _translate(
+                "mainWindow", "Delete input file(s) or directory. It's not recoverable!"
+            )
+        )
         self.deleteBox.setText(_translate("mainWindow", "Delete input"))
-        self.disableProcessingBox.setToolTip(_translate("mainWindow", "<html><head/><body><pre style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Do not process any image, ignore profile and processing options</pre></body></html>"))
-        self.disableProcessingBox.setText(_translate("mainWindow", "Disable processing"))
+        self.disableProcessingBox.setToolTip(
+            _translate(
+                "mainWindow",
+                '<html><head/><body><pre style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Do not process any image, ignore profile and processing options</pre></body></html>',
+            )
+        )
+        self.disableProcessingBox.setText(
+            _translate("mainWindow", "Disable processing")
+        )
         self.gammaLabel.setText(_translate("mainWindow", "Gamma: Auto"))
         self.croppingPowerLabel.setText(_translate("mainWindow", "Cropping power:"))
-        self.directoryButton.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Add directory containing JPG, PNG or GIF files to queue.<br/><span style=\" font-weight:600;\">CBR, CBZ and CB7 files inside will not be processed!</span></p></body></html>"))
+        self.directoryButton.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Add directory containing JPG, PNG or GIF files to queue.<br/><span style=\" font-weight:600;\">CBR, CBZ and CB7 files inside will not be processed!</span></p></body></html>",
+            )
+        )
         self.directoryButton.setText(_translate("mainWindow", "Add directory"))
-        self.fileButton.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Add CBR, CBZ, CB7 or PDF file to queue.</p></body></html>"))
+        self.fileButton.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Add CBR, CBZ, CB7 or PDF file to queue.</p></body></html>",
+            )
+        )
         self.fileButton.setText(_translate("mainWindow", "Add file"))
-        self.deviceBox.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Target device.</p></body></html>"))
-        self.formatBox.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Output format.</p></body></html>"))
-        self.convertButton.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Shift+Click to select the output directory.</p></body></html>"))
+        self.deviceBox.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Target device.</p></body></html>",
+            )
+        )
+        self.formatBox.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Output format.</p></body></html>",
+            )
+        )
+        self.convertButton.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Shift+Click to select the output directory.</p></body></html>",
+            )
+        )
         self.convertButton.setText(_translate("mainWindow", "Convert"))
         self.clearButton.setText(_translate("mainWindow", "Clear list"))
-        self.editorButton.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Shift+Click to edit directory.</p></body></html>"))
+        self.editorButton.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Shift+Click to edit directory.</p></body></html>",
+            )
+        )
         self.editorButton.setText(_translate("mainWindow", "Editor"))
         self.wikiButton.setText(_translate("mainWindow", "Wiki"))
-        self.hLabel.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Resolution of the target device.</p></body></html>"))
+        self.hLabel.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Resolution of the target device.</p></body></html>",
+            )
+        )
         self.hLabel.setText(_translate("mainWindow", "Custom height:"))
-        self.widthBox.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Resolution of the target device.</p></body></html>"))
-        self.wLabel.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Resolution of the target device.</p></body></html>"))
+        self.widthBox.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Resolution of the target device.</p></body></html>",
+            )
+        )
+        self.wLabel.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Resolution of the target device.</p></body></html>",
+            )
+        )
         self.wLabel.setText(_translate("mainWindow", "Custom width:"))
-        self.heightBox.setToolTip(_translate("mainWindow", "<html><head/><body><p style=\'white-space:pre\'>Resolution of the target device.</p></body></html>"))
+        self.heightBox.setToolTip(
+            _translate(
+                "mainWindow",
+                "<html><head/><body><p style='white-space:pre'>Resolution of the target device.</p></body></html>",
+            )
+        )
+
+
 from . import KCC_rc

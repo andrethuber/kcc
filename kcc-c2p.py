@@ -21,13 +21,13 @@
 import sys
 
 if sys.version_info < (3, 8, 0):
-    print('ERROR: This is a Python 3.8+ script!')
+    print("ERROR: This is a Python 3.8+ script!")
     exit(1)
 
 from multiprocessing import freeze_support, set_start_method
 from kindlecomicconverter.startup import startC2P
 
 if __name__ == "__main__":
-    set_start_method('spawn')
+    set_start_method("spawn")
     freeze_support()
     startC2P()

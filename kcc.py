@@ -21,28 +21,35 @@
 import sys
 
 if sys.version_info < (3, 8, 0):
-    print('ERROR: This is a Python 3.8+ script!')
+    print("ERROR: This is a Python 3.8+ script!")
     exit(1)
 
 # OS specific workarounds
 import os
-if sys.platform.startswith('darwin'):
-    if getattr(sys, 'frozen', False):
-        os.environ['PATH'] = os.path.dirname(os.path.abspath(sys.executable)) + \
-                             '/../Resources:/Applications/Kindle Comic Creator/Kindle Comic Creator.app/Contents/MacOS:' \
-                             '/Applications/Kindle Previewer 3.app/Contents/lib/fc/bin/:/usr/local/bin:/usr/bin:/bin'
-        os.chdir(os.path.dirname(os.path.abspath(sys.executable)) + '/../Resources')
+
+if sys.platform.startswith("darwin"):
+    if getattr(sys, "frozen", False):
+        os.environ["PATH"] = (
+            os.path.dirname(os.path.abspath(sys.executable))
+            + "/../Resources:/Applications/Kindle Comic Creator/Kindle Comic Creator.app/Contents/MacOS:"
+            "/Applications/Kindle Previewer 3.app/Contents/lib/fc/bin/:/usr/local/bin:/usr/bin:/bin"
+        )
+        os.chdir(os.path.dirname(os.path.abspath(sys.executable)) + "/../Resources")
     else:
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
-elif sys.platform.startswith('win'):
-    if getattr(sys, 'frozen', False):
-        os.environ['PATH'] = '%LOCALAPPDATA%\\Amazon\\Kindle Previewer 3\\lib\\fc\\bin\\;' + \
-                             os.environ['PATH']
+elif sys.platform.startswith("win"):
+    if getattr(sys, "frozen", False):
+        os.environ["PATH"] = (
+            "%LOCALAPPDATA%\\Amazon\\Kindle Previewer 3\\lib\\fc\\bin\\;"
+            + os.environ["PATH"]
+        )
         os.chdir(os.path.dirname(os.path.abspath(sys.executable)))
     else:
-        os.environ['PATH'] = os.path.dirname(os.path.abspath(__file__)) + '/other/windows/;' \
-                             '%LOCALAPPDATA%\\Amazon\\Kindle Previewer 3\\lib\\fc\\bin\\;' + \
-                             os.environ['PATH']
+        os.environ["PATH"] = (
+            os.path.dirname(os.path.abspath(__file__)) + "/other/windows/;"
+            "%LOCALAPPDATA%\\Amazon\\Kindle Previewer 3\\lib\\fc\\bin\\;"
+            + os.environ["PATH"]
+        )
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # Load additional Sentry configuration
 # if getattr(sys, 'frozen', False):
@@ -55,7 +62,6 @@ from multiprocessing import freeze_support, set_start_method
 from kindlecomicconverter.startup import start
 
 if __name__ == "__main__":
-    set_start_method('spawn')
+    set_start_method("spawn")
     freeze_support()
     start()
-

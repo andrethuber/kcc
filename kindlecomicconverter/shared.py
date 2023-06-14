@@ -38,7 +38,7 @@ class HTMLStripper(HTMLParser):
         self.fed.append(d)
 
     def get_data(self):
-        return ''.join(self.fed)
+        return "".join(self.fed)
 
     def error(self, message):
         pass
@@ -47,14 +47,20 @@ class HTMLStripper(HTMLParser):
 def getImageFileName(imgfile):
     name, ext = os.path.splitext(imgfile)
     ext = ext.lower()
-    if (name.startswith('.') and len(name) == 1) or ext not in ['.png', '.jpg', '.jpeg', '.gif', '.webp']:
+    if (name.startswith(".") and len(name) == 1) or ext not in [
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".gif",
+        ".webp",
+    ]:
         return None
     return [name, ext]
 
 
 def walkSort(dirnames, filenames):
     convert = lambda text: int(text) if text.isdigit() else text
-    alphanum_key = lambda key: [convert(c) for c in split('([0-9]+)', key)]
+    alphanum_key = lambda key: [convert(c) for c in split("([0-9]+)", key)]
     dirnames.sort(key=lambda name: alphanum_key(name.lower()))
     filenames.sort(key=lambda name: alphanum_key(name.lower()))
     return dirnames, filenames
@@ -73,7 +79,7 @@ def walkLevel(some_dir, level=1):
 
 
 def md5Checksum(fpath):
-    with open(fpath, 'rb') as fh:
+    with open(fpath, "rb") as fh:
         m = md5()
         while True:
             data = fh.read(8192)
@@ -84,15 +90,17 @@ def md5Checksum(fpath):
 
 
 def sanitizeTrace(traceback):
-    return ''.join(format_tb(traceback))\
-        .replace('C:/projects/kcc/', '')\
-        .replace('c:/projects/kcc/', '')\
-        .replace('C:/python37-x64/', '')\
-        .replace('c:/python37-x64/', '')\
-        .replace('C:\\projects\\kcc\\', '')\
-        .replace('c:\\projects\\kcc\\', '')\
-        .replace('C:\\python37-x64\\', '')\
-        .replace('c:\\python37-x64\\', '')
+    return (
+        "".join(format_tb(traceback))
+        .replace("C:/projects/kcc/", "")
+        .replace("c:/projects/kcc/", "")
+        .replace("C:/python37-x64/", "")
+        .replace("c:/python37-x64/", "")
+        .replace("C:\\projects\\kcc\\", "")
+        .replace("c:\\projects\\kcc\\", "")
+        .replace("C:\\python37-x64\\", "")
+        .replace("c:\\python37-x64\\", "")
+    )
 
 
 # noinspection PyUnresolvedReferences
@@ -101,36 +109,40 @@ def dependencyCheck(level):
     if level > 2:
         try:
             from PyQt5.QtCore import qVersion as qtVersion
-            if StrictVersion('5.6.0') > StrictVersion(qtVersion()):
-                missing.append('PyQt 5.6.0+')
+
+            if StrictVersion("5.6.0") > StrictVersion(qtVersion()):
+                missing.append("PyQt 5.6.0+")
         except ImportError:
-            missing.append('PyQt 5.6.0+')
+            missing.append("PyQt 5.6.0+")
         try:
             import raven
         except ImportError:
-            missing.append('raven 6.0.0+')
+            missing.append("raven 6.0.0+")
     if level > 1:
         try:
             from psutil import __version__ as psutilVersion
-            if StrictVersion('5.0.0') > StrictVersion(psutilVersion):
-                missing.append('psutil 5.0.0+')
+
+            if StrictVersion("5.0.0") > StrictVersion(psutilVersion):
+                missing.append("psutil 5.0.0+")
         except ImportError:
-            missing.append('psutil 5.0.0+')
+            missing.append("psutil 5.0.0+")
         try:
             from types import ModuleType
             from slugify import __version__ as slugifyVersion
+
             if isinstance(slugifyVersion, ModuleType):
                 slugifyVersion = slugifyVersion.__version__
-            if StrictVersion('1.2.1') > StrictVersion(slugifyVersion):
-                missing.append('python-slugify 1.2.1+')
+            if StrictVersion("1.2.1") > StrictVersion(slugifyVersion):
+                missing.append("python-slugify 1.2.1+")
         except ImportError:
-            missing.append('python-slugify 1.2.1+')
+            missing.append("python-slugify 1.2.1+")
     try:
         from PIL import __version__ as pillowVersion
-        if StrictVersion('5.2.0') > StrictVersion(pillowVersion):
-            missing.append('Pillow 5.2.0+')
+
+        if StrictVersion("5.2.0") > StrictVersion(pillowVersion):
+            missing.append("Pillow 5.2.0+")
     except ImportError:
-        missing.append('Pillow 5.2.0+')
+        missing.append("Pillow 5.2.0+")
     if len(missing) > 0:
-        print('ERROR: ' + ', '.join(missing) + ' is not installed!')
+        print("ERROR: " + ", ".join(missing) + " is not installed!")
         exit(1)
