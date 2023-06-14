@@ -1147,7 +1147,7 @@ class KCCGUI(KCC_ui.Ui_mainWindow):
             "CBZ": {"icon": "CBZ", "format": "CBZ"},
             "EPUB (Calibre KFX)": {"icon": "EPUB", "format": "KFX"},
             "MOBI + EPUB": {"icon": "MOBI", "format": "MOBI+EPUB"},
-            "EPUB (200MB limit)": {"icon": "EPUB", "format": "EPUB-200MB"},
+            "EPUB (50MB limit)": {"icon": "EPUB", "format": "EPUB-50MB"},
         }
 
         self.profiles = {
